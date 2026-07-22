@@ -8,15 +8,19 @@
     <title>Ailemizi Daha İyi Anlıyoruz</title>
 
     <meta name="description"
-        content="Anne, Baba ve Çocuk değerlendirme anket platformu">
+          content="Anne, Baba ve Çocuk değerlendirme anket platformu">
 
-    <linktyle.css
+    css/style.css
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
 
     <div class="container">
 
@@ -37,7 +41,6 @@
             <div class="cardGrid">
 
                 <div class="menuCard" onclick="loadSurvey('father')">
-
                     <div class="menuIcon">👨</div>
 
                     <h2>Babamı Değerlendiriyorum</h2>
@@ -46,11 +49,9 @@
                         Empati, güven, iletişim,
                         öfke kontrolü ve duygusal yakınlık
                     </p>
-
                 </div>
 
                 <div class="menuCard" onclick="loadSurvey('mother')">
-
                     <div class="menuIcon">👩</div>
 
                     <h2>Annemi Değerlendiriyorum</h2>
@@ -59,11 +60,9 @@
                         Şefkat, destek, aile iklimi,
                         iletişim ve empati
                     </p>
-
                 </div>
 
                 <div class="menuCard" onclick="loadSurvey('child')">
-
                     <div class="menuIcon">🧒</div>
 
                     <h2>Çocuğumu Değerlendiriyorum</h2>
@@ -72,7 +71,6 @@
                         Nezaket, sorumluluk,
                         eğitim, karakter ve öz disiplin
                     </p>
-
                 </div>
 
             </div>
@@ -123,9 +121,7 @@
 
             <div class="scoreCardLarge">
 
-                <div id="totalScore" class="bigScore">
-                    0
-                </div>
+                <div id="totalScore" class="bigScore">0</div>
 
                 <div id="profileTitle" class="profileText"></div>
 
@@ -134,39 +130,26 @@
             <div id="categoryCards" class="scoreGrid"></div>
 
             <div class="chartCard">
-
                 <h3>Kategori Analizi</h3>
-
                 <canvas id="radarChart"></canvas>
-
             </div>
 
             <div class="reportCard">
-
                 <h3>🤖 Yapay Zeka Analizi</h3>
-
                 <div id="aiAnalysis"></div>
-
             </div>
 
             <div class="reportCard">
-
                 <h3>✅ Güçlü Yönler</h3>
-
                 <ul id="strengthList"></ul>
-
             </div>
 
             <div class="reportCard">
-
                 <h3>📈 Gelişim Alanları</h3>
-
                 <ul id="improvementList"></ul>
-
             </div>
 
             <div class="reportCard">
-
                 <h3>📝 Ek Notlar</h3>
 
                 <textarea
@@ -202,11 +185,12 @@
 
     <!-- JS DOSYALARI -->
 
-    <script src="js/storage.js"></script>
-	<script src="js/scoring.js"></script>
-	<script src="js/pdf-export.js"></script>
-	<script src="js/survey-loader.js"></script>
-	<script src="js/ai-report.js"></script>
+    js/storage.js>
+    js/scoring.js>
+    js/pdf-export.js>
+    js/survey-loader.js>
+    js/ai-report.js>
+    js/app.js>
 
 </body>
 

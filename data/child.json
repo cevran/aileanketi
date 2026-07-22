@@ -1,0 +1,127 @@
+[
+  {
+    "cat":"Nezaket",
+    "text":"Büyüklerine selam verir."
+  },
+  {
+    "cat":"Nezaket",
+    "text":"Teşekkür etmeyi bilir."
+  },
+  {
+    "cat":"Nezaket",
+    "text":"Lütfen kelimesini kullanır."
+  },
+  {
+    "cat":"Nezaket",
+    "text":"Eline sağlık demeyi bilir."
+  },
+  {
+    "cat":"Nezaket",
+    "text":"İnsanlarla saygılı konuşur."
+  },
+
+  {
+    "cat":"Ev Sorumluluğu",
+    "text":"Odasını kendi isteğiyle toplar."
+  },
+  {
+    "cat":"Ev Sorumluluğu",
+    "text":"Eşyalarını düzenli kullanır."
+  },
+  {
+    "cat":"Ev Sorumluluğu",
+    "text":"Ev işlerine yardım eder."
+  },
+  {
+    "cat":"Ev Sorumluluğu",
+    "text":"Sofra hazırlığına katkı sağlar."
+  },
+  {
+    "cat":"Ev Sorumluluğu",
+    "text":"Ortak alanları temiz bırakır."
+  },
+
+  {
+    "cat":"Eğitim",
+    "text":"Ödevlerini zamanında yapar."
+  },
+  {
+    "cat":"Eğitim",
+    "text":"Ders çalışma alışkanlığı vardır."
+  },
+  {
+    "cat":"Eğitim",
+    "text":"Kitap okumaya zaman ayırır."
+  },
+  {
+    "cat":"Eğitim",
+    "text":"Öğretmenlerine saygılı davranır."
+  },
+  {
+    "cat":"Eğitim",
+    "text":"Yeni şeyler öğrenmeye isteklidir."
+  },
+
+  {
+    "cat":"Aile İlişkileri",
+    "text":"Aile bireyleriyle vakit geçirmekten hoşlanır."
+  },
+  {
+    "cat":"Aile İlişkileri",
+    "text":"Sorunlarını ailesiyle paylaşır."
+  },
+  {
+    "cat":"Aile İlişkileri",
+    "text":"Aile kurallarına uymaya çalışır."
+  },
+  {
+    "cat":"Aile İlişkileri",
+    "text":"Sevgisini gösterebilir."
+  },
+  {
+    "cat":"Aile İlişkileri",
+    "text":"Aile değerlerine önem verir."
+  },
+
+  {
+    "cat":"Karakter",
+    "text":"Dürüst davranır."
+  },
+  {
+    "cat":"Karakter",
+    "text":"Sözünde durmaya çalışır."
+  },
+  {
+    "cat":"Karakter",
+    "text":"Hatalarını kabul eder."
+  },
+  {
+    "cat":"Karakter",
+    "text":"Yardımseverdir."
+  },
+  {
+    "cat":"Karakter",
+    "text":"Empati kurmaya çalışır."
+  },
+
+  {
+    "cat":"Öz Disiplin",
+    "text":"Ekran süresini kontrol edebilir."
+  },
+  {
+    "cat":"Öz Disiplin",
+    "text":"Verilen görevleri tamamlar."
+  },
+  {
+    "cat":"Öz Disiplin",
+    "text":"Zamanını planlayabilir."
+  },
+  {
+    "cat":"Öz Disiplin",
+    "text":"Erteleme alışkanlığı düşüktür."
+  },
+  {
+    "cat":"Öz Disiplin",
+    "text":"Zorluklarla karşılaştığında pes etmeden mücadele eder."
+  }
+]

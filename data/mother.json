@@ -1,0 +1,127 @@
+[
+  {
+    "cat":"Şefkat",
+    "text":"Annem sevgisini hissettirir."
+  },
+  {
+    "cat":"Şefkat",
+    "text":"Benimle ilgilenir."
+  },
+  {
+    "cat":"Şefkat",
+    "text":"Şefkatlidir."
+  },
+  {
+    "cat":"Şefkat",
+    "text":"Yanında güvende hissederim."
+  },
+  {
+    "cat":"Şefkat",
+    "text":"Bana değer verdiğini gösterir."
+  },
+
+  {
+    "cat":"Empati",
+    "text":"Beni anlamaya çalışır."
+  },
+  {
+    "cat":"Empati",
+    "text":"Duygularımı önemser."
+  },
+  {
+    "cat":"Empati",
+    "text":"Sakin bir şekilde dinler."
+  },
+  {
+    "cat":"Empati",
+    "text":"Beni yargılamaz."
+  },
+  {
+    "cat":"Empati",
+    "text":"Olaylara benim açımdan bakmaya çalışır."
+  },
+
+  {
+    "cat":"İletişim",
+    "text":"Annemle rahat konuşabilirim."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Beni dikkatlice dinler."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Bağırmadan konuşur."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Fikirlerime saygı duyar."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Açık iletişim kurar."
+  },
+
+  {
+    "cat":"Destek",
+    "text":"Başarılarımı destekler."
+  },
+  {
+    "cat":"Destek",
+    "text":"Hayallerimi önemser."
+  },
+  {
+    "cat":"Destek",
+    "text":"Zor zamanlarımda yanımdadır."
+  },
+  {
+    "cat":"Destek",
+    "text":"Beni cesaretlendirir."
+  },
+  {
+    "cat":"Destek",
+    "text":"Özgüven kazanmama yardımcı olur."
+  },
+
+  {
+    "cat":"Adalet",
+    "text":"Anneme güvenebilirim."
+  },
+  {
+    "cat":"Adalet",
+    "text":"Beni başkalarıyla kıyaslamaz."
+  },
+  {
+    "cat":"Adalet",
+    "text":"Kararlarında tutarlıdır."
+  },
+  {
+    "cat":"Adalet",
+    "text":"Herkese eşit davranır."
+  },
+  {
+    "cat":"Adalet",
+    "text":"Haksızlık yaptığında kabul eder."
+  },
+
+  {
+    "cat":"Aile İklimi",
+    "text":"Evde huzurlu bir ortam oluşturur."
+  },
+  {
+    "cat":"Aile İklimi",
+    "text":"Birlikte vakit geçirmeyi önemser."
+  },
+  {
+    "cat":"Aile İklimi",
+    "text":"Sorunları konuşarak çözmeye çalışır."
+  },
+  {
+    "cat":"Aile İklimi",
+    "text":"Sevgi ve saygı ortamı oluşturur."
+  },
+  {
+    "cat":"Aile İklimi",
+    "text":"Aile bağlarını güçlendirmeye çalışır."
+  }
+]

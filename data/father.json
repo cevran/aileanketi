@@ -1,0 +1,127 @@
+[
+  {
+    "cat":"Duygusal Yakınlık",
+    "text":"Babam bana olan sevgisini hissettirir."
+  },
+  {
+    "cat":"Duygusal Yakınlık",
+    "text":"Benimle kaliteli zaman geçirmek için fırsatlar arar."
+  },
+  {
+    "cat":"Duygusal Yakınlık",
+    "text":"Anlatmak istediğimde beni dinler."
+  },
+  {
+    "cat":"Duygusal Yakınlık",
+    "text":"Babamın yanında kendimi değerli hissederim."
+  },
+  {
+    "cat":"Duygusal Yakınlık",
+    "text":"Babamla duygularımı paylaşabilirim."
+  },
+
+  {
+    "cat":"Empati",
+    "text":"Babam beni anlamaya çalışır."
+  },
+  {
+    "cat":"Empati",
+    "text":"Duygularıma önem verir."
+  },
+  {
+    "cat":"Empati",
+    "text":"Yargılamadan dinler."
+  },
+  {
+    "cat":"Empati",
+    "text":"Beni hemen eleştirmez."
+  },
+  {
+    "cat":"Empati",
+    "text":"Sorunlarıma ilgi gösterir."
+  },
+
+  {
+    "cat":"Güvenilirlik",
+    "text":"Verdiği sözleri tutar."
+  },
+  {
+    "cat":"Güvenilirlik",
+    "text":"Dürüst davranır."
+  },
+  {
+    "cat":"Güvenilirlik",
+    "text":"İhtiyacım olduğunda yanımda olacağına güvenirim."
+  },
+  {
+    "cat":"Güvenilirlik",
+    "text":"Aile sorumluluklarını yerine getirir."
+  },
+  {
+    "cat":"Güvenilirlik",
+    "text":"Güven veren biridir."
+  },
+
+  {
+    "cat":"Öfke Kontrolü",
+    "text":"Öfkesini kontrol edebilir."
+  },
+  {
+    "cat":"Öfke Kontrolü",
+    "text":"Bağırmadan konuşabilir."
+  },
+  {
+    "cat":"Öfke Kontrolü",
+    "text":"Aşırı tepki vermez."
+  },
+  {
+    "cat":"Öfke Kontrolü",
+    "text":"Kırıcı sözlerden kaçınır."
+  },
+  {
+    "cat":"Öfke Kontrolü",
+    "text":"Sakin kalmaya çalışır."
+  },
+
+  {
+    "cat":"İletişim",
+    "text":"Babamla rahat konuşabilirim."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Fikirlerime saygı duyar."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Özür dileyebilir."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Açık iletişim kurar."
+  },
+  {
+    "cat":"İletişim",
+    "text":"Beni dikkatle dinler."
+  },
+
+  {
+    "cat":"Destekleyicilik",
+    "text":"Başarılarımı takdir eder."
+  },
+  {
+    "cat":"Destekleyicilik",
+    "text":"Hayallerimi destekler."
+  },
+  {
+    "cat":"Destekleyicilik",
+    "text":"Kendime güvenmemi sağlar."
+  },
+  {
+    "cat":"Destekleyicilik",
+    "text":"Zor zamanlarımda yanımdadır."
+  },
+  {
+    "cat":"Destekleyicilik",
+    "text":"Beni geliştirmeye çalışır."
+  }
+]

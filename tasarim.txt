@@ -1,0 +1,22 @@
+aile-platformu/
+
+index.html
+
+css/
+├── style.css
+
+js/
+├── app.js
+├── survey-loader.js
+├── scoring.js
+├── ai-report.js
+├── pdf-export.js
+├── storage.js
+
+data/
+├── father.json
+├── mother.json
+├── child.json
+
+assets/
+├── logo.png   (isteğe bağlı)

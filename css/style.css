@@ -1,0 +1,549 @@
+/* =====================================
+   GENEL
+===================================== */
+
+:root{
+
+    --primary:#3498db;
+    --primary-dark:#2980b9;
+
+    --success:#2ecc71;
+    --warning:#f39c12;
+    --danger:#e74c3c;
+
+    --purple:#8e44ad;
+    --teal:#16a085;
+
+    --bg:#f5f7fb;
+    --card:#ffffff;
+
+    --text:#2c3e50;
+    --light:#6b7280;
+
+    --shadow:
+    0 4px 14px rgba(0,0,0,.08);
+
+    --radius:16px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    line-height:1.5;
+
+}
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:15px;
+
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header{
+
+    text-align:center;
+
+    padding:25px 10px;
+
+}
+
+.header h1{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:var(--light);
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* =====================================
+   MENU KARTLARI
+===================================== */
+
+.cardGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.menuCard{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:24px;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+    box-shadow:var(--shadow);
+
+}
+
+.menuCard:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.menuIcon{
+
+    font-size:56px;
+
+    margin-bottom:10px;
+
+    text-align:center;
+
+}
+
+.menuCard h2{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.menuCard p{
+
+    color:var(--light);
+
+    text-align:center;
+
+}
+
+/* =====================================
+   ANKET
+===================================== */
+
+.question{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.question h3{
+
+    font-size:1rem;
+
+    margin-bottom:15px;
+
+}
+
+.option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:8px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid #e5e7eb;
+
+    background:#f9fafb;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.option:hover{
+
+    background:#eef7ff;
+
+    border-color:var(--primary);
+
+}
+
+.option input{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+/* =====================================
+   BUTONLAR
+===================================== */
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.btnPrimary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btnPrimary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btnSecondary{
+
+    background:#e5e7eb;
+
+}
+
+.btnDanger{
+
+    background:var(--danger);
+
+    color:white;
+
+}
+
+.btnPdf{
+
+    background:#27ae60;
+
+    color:white;
+
+}
+
+/* =====================================
+   SURVEY
+===================================== */
+
+#surveyContainer{
+
+    margin-top:20px;
+
+}
+
+.surveyHeader{
+
+    margin-bottom:20px;
+
+}
+
+.actionBar{
+
+    margin-top:20px;
+
+}
+
+/* =====================================
+   GİZLİ ALAN
+===================================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* =====================================
+   SONUÇ
+===================================== */
+
+.scoreCardLarge{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:20px;
+
+}
+
+.bigScore{
+
+    font-size:72px;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+}
+
+.profileText{
+
+    margin-top:10px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+/* =====================================
+   KATEGORİ KARTLARI
+===================================== */
+
+.scoreGrid{
+
+    display:grid;
+
+    grid-template-columns:
+            repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+.scoreItem{
+
+    color:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.scoreItem h4{
+
+    margin-bottom:8px;
+
+}
+
+.scoreValue{
+
+    font-size:32px;
+
+    font-weight:bold;
+
+}
+
+/* =====================================
+   RAPOR KARTLARI
+===================================== */
+
+.reportCard{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:20px;
+
+}
+
+.reportCard h3{
+
+    margin-bottom:12px;
+
+}
+
+.reportCard ul{
+
+    padding-left:18px;
+
+}
+
+.reportCard li{
+
+    margin-bottom:6px;
+
+}
+
+/* =====================================
+   CHART
+===================================== */
+
+.chartCard{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:20px;
+
+}
+
+.chartCard canvas{
+
+    max-height:450px;
+
+}
+
+/* =====================================
+   NOTLAR
+===================================== */
+
+textarea{
+
+    width:100%;
+
+    min-height:140px;
+
+    resize:vertical;
+
+    border-radius:12px;
+
+    border:1px solid #d1d5db;
+
+    padding:15px;
+
+    font-size:15px;
+
+}
+
+/* =====================================
+   HISTORY
+===================================== */
+
+.historyHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:25px 0;
+
+}
+
+.historyItem{
+
+    background:white;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media(min-width:768px){
+
+    .cardGrid{
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media(min-width:1200px){
+
+    .container{
+
+        padding:30px;
+
+    }
+
+    .bigScore{
+
+        font-size:90px;
+
+    }
+
+}

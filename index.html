@@ -1,126 +1,213 @@
-<!DOCTYPE html><html lang='tr'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Ailemizi Daha İyi Anlıyoruz</title><script src='https://cdn.jsdelivr.net/npm/chart.js'></script><style>body{font-family:Segoe UI,sans-serif;background:#f4f6f9;margin:0;padding:15px} .wrap{max-width:1000px;margin:auto}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.card,.q,.panel{background:#fff;border-radius:14px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,.08)} button{background:#0a84ff;color:#fff;border:0;padding:12px 18px;border-radius:10px}.scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.score{color:#fff;padding:12px;border-radius:10px}.hidden{display:none}</style></head><body><div class='wrap'><h1>🏠 Ailemizi Daha İyi Anlıyoruz</h1><div id='home' class='cards'></div><div id='survey'></div><div id='result' class='hidden'></div></div><script>
-const make=(prefix,items)=>items.map((t,i)=>({cat:prefix,text:t}));
-const father = [
+<!DOCTYPE html>
+<html lang="tr">
 
-{cat:"Duygusal Yakınlık",text:"Babam sevgisini hissettirir."},
-{cat:"Duygusal Yakınlık",text:"Benimle kaliteli zaman geçirir."},
-{cat:"Duygusal Yakınlık",text:"Beni dinler."},
-{cat:"Duygusal Yakınlık",text:"Yanında kendimi değerli hissederim."},
-{cat:"Duygusal Yakınlık",text:"Babamla duygularımı paylaşabilirim."},
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{cat:"Empati",text:"Babam beni anlamaya çalışır."},
-{cat:"Empati",text:"Duygularıma önem verir."},
-{cat:"Empati",text:"Yargılamadan dinler."},
-{cat:"Empati",text:"Beni hemen eleştirmez."},
-{cat:"Empati",text:"Sorunlarıma ilgi gösterir."},
+    <title>Ailemizi Daha İyi Anlıyoruz</title>
 
-{cat:"Güvenilirlik",text:"Verdiği sözleri tutar."},
-{cat:"Güvenilirlik",text:"Dürüst davranır."},
-{cat:"Güvenilirlik",text:"Yanımda olacağına güvenirim."},
-{cat:"Güvenilirlik",text:"Aile sorumluluklarını yerine getirir."},
-{cat:"Güvenilirlik",text:"Güven veren biridir."},
+    <meta name="description"
+        content="Anne, Baba ve Çocuk değerlendirme anket platformu">
 
-{cat:"Öfke Kontrolü",text:"Öfkesini kontrol edebilir."},
-{cat:"Öfke Kontrolü",text:"Bağırmadan konuşabilir."},
-{cat:"Öfke Kontrolü",text:"Aşırı tepki vermez."},
-{cat:"Öfke Kontrolü",text:"Kırıcı sözlerden kaçınır."},
-{cat:"Öfke Kontrolü",text:"Sakin kalmaya çalışır."},
+    <linktyle.css
 
-{cat:"İletişim",text:"Babamla rahat konuşabilirim."},
-{cat:"İletişim",text:"Fikirlerime saygı duyar."},
-{cat:"İletişim",text:"Özür dileyebilir."},
-{cat:"İletişim",text:"Açık iletişim kurar."},
-{cat:"İletişim",text:"Beni dikkatle dinler."},
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-{cat:"Destekleyicilik",text:"Başarılarımı takdir eder."},
-{cat:"Destekleyicilik",text:"Hayallerimi destekler."},
-{cat:"Destekleyicilik",text:"Kendime güvenmemi sağlar."},
-{cat:"Destekleyicilik",text:"Zor zamanlarımda yanımdadır."},
-{cat:"Destekleyicilik",text:"Beni geliştirmeye çalışır."}
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script
 
-];
-const mother = [
+    <div class="container">
 
-{cat:"Şefkat",text:"Annem sevgisini hissettirir."},
-{cat:"Şefkat",text:"Benimle ilgilenir."},
-{cat:"Şefkat",text:"Şefkatlidir."},
-{cat:"Şefkat",text:"Yanında güvende hissederim."},
-{cat:"Şefkat",text:"Bana değer verdiğini gösterir."},
+        <!-- HEADER -->
+        <header class="header">
 
-{cat:"Empati",text:"Beni anlamaya çalışır."},
-{cat:"Empati",text:"Duygularımı önemser."},
-{cat:"Empati",text:"Sakin şekilde dinler."},
-{cat:"Empati",text:"Beni yargılamaz."},
-{cat:"Empati",text:"Benim açımdan bakmaya çalışır."},
+            <h1>🏠 Ailemizi Daha İyi Anlıyoruz</h1>
 
-{cat:"İletişim",text:"Annemle rahat konuşabilirim."},
-{cat:"İletişim",text:"Beni dikkatlice dinler."},
-{cat:"İletişim",text:"Bağırmadan konuşur."},
-{cat:"İletişim",text:"Fikirlerime saygı duyar."},
-{cat:"İletişim",text:"Açık iletişim kurar."},
+            <p class="subtitle">
+                Birbirimizi daha iyi tanımak ve ilişkilerimizi güçlendirmek için hazırlanmış değerlendirme platformu
+            </p>
 
-{cat:"Destek",text:"Başarılarımı destekler."},
-{cat:"Destek",text:"Hayallerimi önemser."},
-{cat:"Destek",text:"Zor zamanlarımda yanımdadır."},
-{cat:"Destek",text:"Beni cesaretlendirir."},
-{cat:"Destek",text:"Özgüven kazanmama yardımcı olur."},
+        </header>
 
-{cat:"Adalet",text:"Kardeşler arasında adildir."},
-{cat:"Adalet",text:"Beni başkalarıyla kıyaslamaz."},
-{cat:"Adalet",text:"Kararlarında tutarlıdır."},
-{cat:"Adalet",text:"Herkese eşit davranır."},
-{cat:"Adalet",text:"Haksızlık yaptığında kabul eder."},
+        <!-- ANKET SEÇİM EKRANI -->
+        <section id="homeScreen">
 
-{cat:"Aile İklimi",text:"Evde huzurlu ortam sağlar."},
-{cat:"Aile İklimi",text:"Birlikte vakit geçirmeyi önemser."},
-{cat:"Aile İklimi",text:"Sorunları konuşarak çözmeye çalışır."},
-{cat:"Aile İklimi",text:"Sevgi ortamı oluşturur."},
-{cat:"Aile İklimi",text:"Aile bağlarını güçlendirmeye çalışır."}
+            <div class="cardGrid">
 
-];
-const child = [
+                <div class="menuCard" onclick="loadSurvey('father')">
 
-{cat:"Nezaket",text:"Büyüklerine selam verir."},
-{cat:"Nezaket",text:"Teşekkür etmeyi bilir."},
-{cat:"Nezaket",text:"Lütfen kelimesini kullanır."},
-{cat:"Nezaket",text:"Eline sağlık demeyi bilir."},
-{cat:"Nezaket",text:"İnsanlarla saygılı konuşur."},
+                    <div class="menuIcon">👨</div>
 
-{cat:"Ev Sorumluluğu",text:"Odasını toplar."},
-{cat:"Ev Sorumluluğu",text:"Eşyalarını düzenli kullanır."},
-{cat:"Ev Sorumluluğu",text:"Ev işlerine yardım eder."},
-{cat:"Ev Sorumluluğu",text:"Sofra hazırlığına katkı sağlar."},
-{cat:"Ev Sorumluluğu",text:"Ortak alanları temiz bırakır."},
+                    <h2>Babamı Değerlendiriyorum</h2>
 
-{cat:"Eğitim",text:"Ödevlerini zamanında yapar."},
-{cat:"Eğitim",text:"Ders çalışma alışkanlığı vardır."},
-{cat:"Eğitim",text:"Kitap okumaya zaman ayırır."},
-{cat:"Eğitim",text:"Öğretmenlerine saygılı davranır."},
-{cat:"Eğitim",text:"Yeni şeyler öğrenmeye isteklidir."},
+                    <p>
+                        Empati, güven, iletişim,
+                        öfke kontrolü ve duygusal yakınlık
+                    </p>
 
-{cat:"Aile İlişkileri",text:"Aile bireyleriyle vakit geçirir."},
-{cat:"Aile İlişkileri",text:"Sorunlarını paylaşır."},
-{cat:"Aile İlişkileri",text:"Kurallara uymaya çalışır."},
-{cat:"Aile İlişkileri",text:"Sevgisini gösterebilir."},
-{cat:"Aile İlişkileri",text:"Aile değerlerine önem verir."},
+                </div>
 
-{cat:"Karakter",text:"Dürüst davranır."},
-{cat:"Karakter",text:"Sözünde durur."},
-{cat:"Karakter",text:"Hatalarını kabul eder."},
-{cat:"Karakter",text:"Yardımseverdir."},
-{cat:"Karakter",text:"Empati kurmaya çalışır."},
+                <div class="menuCard" onclick="loadSurvey('mother')">
 
-{cat:"Öz Disiplin",text:"Ekran süresini kontrol edebilir."},
-{cat:"Öz Disiplin",text:"Verilen görevleri tamamlar."},
-{cat:"Öz Disiplin",text:"Zamanını planlayabilir."},
-{cat:"Öz Disiplin",text:"Erteleme alışkanlığı düşüktür."},
-{cat:"Öz Disiplin",text:"Zorluklarda mücadeleyi sürdürür."}
+                    <div class="menuIcon">👩</div>
 
-];
+                    <h2>Annemi Değerlendiriyorum</h2>
 
-const surveys={father,mother,child}; const titles={father:'👨 Baba',mother:'👩 Anne',child:'🧒 Çocuk'};
-const home=document.getElementById('home'); ['father','mother','child'].forEach(k=>home.innerHTML+=`<div class=card><h2>${titles[k]}</h2><button onclick="loadSurvey('${k}')">Başla</button></div>`);
-let current='';
-function loadSurvey(k){current=k; let h=''; surveys[k].forEach((q,i)=>{h+=`<div class=q><b>${i+1}. ${q.text}</b><div>${[1,2,3,4,5].map(v=>`<label><input type=radio name=q${i} value=${v}>${v}</label>`).join(' ')}</div></div>`}); h+=`<button onclick='calc()'>Rapor Oluştur</button>`; survey.innerHTML=h; }
-function calc(){let t=0,max=surveys[current].length*5,cats={}; for(let i=0;i<surveys[current].length;i++){let c=document.querySelector('input[name=q'+i+']:checked'); if(!c){alert((i+1)+'. soru');return;} let v=+c.value;t+=v; let cat=surveys[current][i].cat;(cats[cat]=cats[cat]||[]).push(v);} let labels=[],vals=[],strength=[],improve=[]; for(let k in cats){let s=Math.round(cats[k].reduce((a,b)=>a+b)/cats[k].length*20); labels.push(k); vals.push(s); if(s>=80) strength.push(k); if(s<65) improve.push(k);} let p=Math.round(t/max*100); result.classList.remove('hidden'); result.innerHTML=`<div class=panel><h2>Sonuç %${p}</h2><canvas id=radar></canvas><div class=scores>${labels.map((l,i)=>`<div class='score' style='background:hsl(${i*50},70%,45%)'>${l}<br><b>%${vals[i]}</b></div>`).join('')}</div><h3>AI Analizi</h3><p>${p>80?'İlişki genel olarak güçlü görünüyor.':'Geliştirilmesi gereken alanlar bulunuyor.'} Güçlü yönler: ${strength.join(', ')||'Yok'}. Gelişim alanları: ${improve.join(', ')||'Yok'}.</p><textarea style='width:100%;height:120px' placeholder='Ek notlar'></textarea></div>`; new Chart(document.getElementById('radar'),{type:'radar',data:{labels:labels,datasets:[{data:vals}]}}); window.scrollTo(0,document.body.scrollHeight); localStorage.setItem('lastScore',p);}
-</script></body></html>
+                    <p>
+                        Şefkat, destek, aile iklimi,
+                        iletişim ve empati
+                    </p>
+
+                </div>
+
+                <div class="menuCard" onclick="loadSurvey('child')">
+
+                    <div class="menuIcon">🧒</div>
+
+                    <h2>Çocuğumu Değerlendiriyorum</h2>
+
+                    <p>
+                        Nezaket, sorumluluk,
+                        eğitim, karakter ve öz disiplin
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ANKET EKRANI -->
+        <section id="surveyScreen" class="hidden">
+
+            <div class="surveyHeader">
+
+                <button class="btnSecondary" onclick="goHome()">
+                    ← Ana Sayfa
+                </button>
+
+                <h2 id="surveyTitle"></h2>
+
+            </div>
+
+            <div id="progressInfo"></div>
+
+            <div id="surveyContainer"></div>
+
+            <div class="actionBar">
+
+                <button class="btnPrimary" onclick="calculateSurvey()">
+                    📊 Raporu Oluştur
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- SONUÇ EKRANI -->
+        <section id="resultScreen" class="hidden">
+
+            <div class="resultTop">
+
+                <button class="btnSecondary" onclick="goHome()">
+                    ← Ana Sayfa
+                </button>
+
+                <button class="btnPdf" onclick="exportPDF()">
+                    📄 PDF İndir
+                </button>
+
+            </div>
+
+            <div class="scoreCardLarge">
+
+                <div id="totalScore" class="bigScore">
+                    0
+                </div>
+
+                <div id="profileTitle" class="profileText"></div>
+
+            </div>
+
+            <div id="categoryCards" class="scoreGrid"></div>
+
+            <div class="chartCard">
+
+                <h3>Kategori Analizi</h3>
+
+                <canvas id="radarChart"></canvas>
+
+            </div>
+
+            <div class="reportCard">
+
+                <h3>🤖 Yapay Zeka Analizi</h3>
+
+                <div id="aiAnalysis"></div>
+
+            </div>
+
+            <div class="reportCard">
+
+                <h3>✅ Güçlü Yönler</h3>
+
+                <ul id="strengthList"></ul>
+
+            </div>
+
+            <div class="reportCard">
+
+                <h3>📈 Gelişim Alanları</h3>
+
+                <ul id="improvementList"></ul>
+
+            </div>
+
+            <div class="reportCard">
+
+                <h3>📝 Ek Notlar</h3>
+
+                <textarea
+                    id="freeComment"
+                    placeholder="Buraya not veya yorum ekleyebilirsiniz..."></textarea>
+
+            </div>
+
+        </section>
+
+        <!-- GEÇMİŞ SONUÇLAR -->
+        <section id="historySection">
+
+            <div class="historyHeader">
+
+                <h2>📚 Önceki Sonuçlar</h2>
+
+                <button
+                    class="btnDanger"
+                    onclick="clearHistory()">
+
+                    Geçmişi Temizle
+
+                </button>
+
+            </div>
+
+            <div id="historyContainer"></div>
+
+        </section>
+
+    </div>
+
+    <!-- JS DOSYALARI -->
+
+    <script src="js/storage.js"></script>
+	<script src="js/scoring.js"></script>
+	<script src="js/pdf-export.js"></script>
+	<script src="js/survey-loader.js"></script>
+	<script src="js/ai-report.js"></script>
+
+</body>
+
+</html>
